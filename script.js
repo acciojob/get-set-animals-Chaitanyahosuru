@@ -1,29 +1,37 @@
 //complete this code
+// Animal class definition
 class Animal {
-	constructor(species) {
-        this._species = species
-}
-	 get species() {
+    constructor(species) {
+        this._species = species; // Private property
+    }
+
+    get species() {
         return this._species;
-	 }
-	makeSound() {
+    }
+
+    makeSound() {
         console.log(`The ${this.species} makes a sound`);
     }
 }
 
-class Dog extends Animal {
-	constructor(species) {
+// Cat class definition
+class Cat extends Animal {
+    constructor(species) {
         super(species);
-		purr() {
+    }
+
+    purr() {
         console.log('purr');
     }
 }
 
-class Cat extends Animal {
-	onstructor(species) {
-        super(species); // Call the parent class constructor
+// Dog class definition
+class Dog extends Animal {
+    constructor(species) {
+        super(species);
     }
-	bark() {
+
+    bark() {
         console.log('woof');
     }
 }
